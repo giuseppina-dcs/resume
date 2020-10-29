@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-awesome-styled-grid'
-import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from "react-icons/fa"
+import { FaLinkedin, FaEnvelope } from "react-icons/fa"
 import siteConfig from '../../data/siteConfig'
 import { withPrefix } from "gatsby"
 import loadable from '@loadable/component'
@@ -23,11 +23,24 @@ const Separator = styled.hr`
   opacity: .2;
 `
 
-const Home = ({ className, location }) => {
-  // validate siteConfig settings
-  if (siteConfig.googleAnalyticsId === 'UA-000000000-1') {
-    console.error('WARNING: Please set a proper googleAnalyticsId. See https://analytics.google.com for details.');
+
+const Link = styled(({ className, icon: Icon, color, ...props }) => (
+  <a 
+    className={className}
+    target='_blank'
+    rel="noopener noreferrer"
+    {...props}
+  >
+    <Icon color={color} size={32} />
+  </a>
+)).attrs(props => ({ color: props.theme.colors.primary }))`
+  & + & {
+    margin-left: 24px;
   }
+`;
+
+const Home = ({ className, location }) => {
+
 
   const title = siteConfig.siteTitle
   const { keywords } = siteConfig
@@ -43,6 +56,7 @@ const Home = ({ className, location }) => {
         title={title}
       />
 
+
       <Wrapper className={className} >
         <Container className="page-content" fluid>
           <Row>
@@ -53,24 +67,14 @@ const Home = ({ className, location }) => {
                 alt='user avatar'
               />
               <div className="social">
-                {siteConfig.social.github && <a className="social-link github" href={siteConfig.social.github}>
-                  <FaGithub className="social-icon" size="32" />
-                </a>}
-                {siteConfig.social.linkedin && <a className="social-link linkedin" href={siteConfig.social.linkedin}>
-                  <FaLinkedin className="social-icon" size="32" />
-                </a>}
-                {siteConfig.social.twitter && <a className="social-link twitter" href={siteConfig.social.twitter}>
-                  <FaTwitter className="social-icon" size="32" />
-                </a>}
-                {siteConfig.social.email && <a className="social-link email" href={`mailto:${siteConfig.social.email}`}>
-                  <FaEnvelope className="social-icon" size="32" />
-                </a>}
+              {siteConfig.social.linkedin && <Link href={siteConfig.social.linkedin} icon={FaLinkedin} />}
+              {siteConfig.social.email && <Link href={`mailto:${siteConfig.social.email}`} icon={FaEnvelope} />}
               </div>
             </Col>
           </Row>
           <Row>
             <Col xs={4} sm={4}>
-              <About title='About' text={siteConfig.authorDescription}/>
+              <About title='About' text={siteConfig.authorDescription} />
             </Col>
             <Col xs={4} sm={4}>
               <Skills title='Skills' skills={siteConfig.skills} />

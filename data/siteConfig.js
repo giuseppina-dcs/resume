@@ -1,45 +1,49 @@
 module.exports = {
-  siteTitle: 'Hi! I\'m Francisco!',
-  siteDescription: `Create your online curriculum in just a few minutes with this starter`,
-  keyWords: ['gatsbyjs', 'react', 'curriculum'],
-  authorName: 'Francisco Santos',
-  twitterUsername: '_franciscodf',
-  githubUsername: 'santosfrancisco',
-  authorAvatar: '/images/avatar.jpeg',
-  authorDescription: `Developer, passionate about what I do. Always interested in how the sites were made, I started to study HTML by hobby. <br />
-    In 2012 I started working as a support technician and I approached the developers.
-    In 2015, I started to study C # and started to contribute with the team giving maintenance in an application in C # and .NET. <br />
-    I currently work as a frontend developer and mainly work with <strong>Javascript, NodeJS e React.</strong>`,
+  siteTitle: 'Giuseppina De Cesare',
+  authorName: 'Giuseppina De Cesare',
+  siteDescription: `Giuseppina De Cesare Personal Website`,
+  keyWords: ['giuseppina', 'giuseppina de cesare', 'giuseppina dcs', 'gatsbyjs', 'react', 'curriculum'],
+  authorAvatar: '/images/giu.jpg',
+  authorDescription: `
+  I am an experienced <strong> Recruiter</strong> with a Humanities background and international exposure.
+  Currently based in <strong>Prague</strong>, I have managed Recruitment activities across the <strong> EMEA region </strong>.<br />
+  I support Businesses and Stakeholders to define competitive and market-specific Recruitment strategies.
+  I am committed to create Diverse and Inclusive Hiring Processes, and I use my international background to conduct cross-cultural meetings and interviews. 
+  I also support job seekers with CV creation, interview preparation and Tips&Tricks to look for new career opportunities.`,
   skills: [
     {
-      name: 'HTML',
-      level: 70
+      name: 'Stakeholder Management',
+      level: 100
     },
     {
-      name: 'CSS',
-      level: 60
+      name: 'Recruiting',
+      level: 100
     },
     {
-      name: 'Javascript',
-      level: 50
+      name: 'Project Management',
+      level: 100
     },
     {
-      name: 'NodeJs',
-      level: 40
+      name: 'Headhunting',
+      level: 100
     },
     {
-      name: 'React',
-      level: 60
+      name: 'Consulting',
+      level: 100
     },
     {
-      name: 'Git',
-      level: 70
+      name: 'Advertising',
+      level: 100
     },
-    /* more skills here */
+    {
+      name: 'Data Analysis & Integrity (Tableau, Excel, ATS)',
+      level: 100
+    },
+
   ],
   jobs: [
     /* more jobs here */
-    {
+    /* {
       company: "Gympass",
       begin: {
         month: 'sep',
@@ -78,10 +82,10 @@ module.exports = {
       occupation: "Support Technician",
       description: "Responsible for the implementation and parameterization of the system, training and customer support. Acting also in person in real estate launches guaranteeing the success and good use of the tool."
   
-    },
+    }, */
   ],
   portifolio: [
-    {
+    /* {
       image: "/images/gatsby-starter-cv.png",
       description: "Gatsby starter CV template",
       url: "https://www.gatsbyjs.org/starters/santosfrancisco/gatsby-starter-cv/"
@@ -90,18 +94,23 @@ module.exports = {
       image: "/images/awesome-grid.png",
       description: "Responsive grid for ReactJS",
       url: "https://github.com/santosfrancisco/react-awesome-styled-grid"
-    },
+    }, */
     /* more portifolio items here */
   ],
+
+
   social: {
-    twitter: "https://twitter.com/_franciscodf",
-    linkedin: "https://www.linkedin.com/in/santos-francisco",
-    github: "https://github.com/santosfrancisco",
-    email: "yoshi.df@gmail.com"
+    linkedin: "https://www.linkedin.com/in/giuseppina-decesare",
+    email: "giuseppina.dcs@gmail.com"
   },
-  siteUrl: 'https://santosfrancisco.github.io/gatsbystarter-cv',
-  pathPrefix: '/gatsby-starter-cv', // Note: it must *not* have a trailing slash.
-  siteCover: '/images/cover.jpeg',
+
+
+  siteUrl: 'https://giuseppina-dcs.github.io/resume',
+  pathPrefix: '/resume', // Note: it must *not* have a trailing slash.
+  siteCover: '/images/giu_header.jpg',
+  
+  
+  
   googleAnalyticsId: 'UA-000000000-1',
   background_color: '#ffffff',
   theme_color: '#25303B',
@@ -111,12 +120,12 @@ module.exports = {
   icon: 'src/assets/gatsby-icon.png',
   headerLinks: [
     {
-      label: 'Home',
+      label: 'About & Experience',
       url: '/',
     },
     {
-      label: 'Portifolio',
-      url: '/portifolio',
-    }
+      label: 'Education',
+      url: '/education',
+    },
   ]
 }

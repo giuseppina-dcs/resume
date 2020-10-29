@@ -42,6 +42,7 @@ export default createGlobalStyle`
   }
   a {
     background-color: transparent;
+    color: cyan;
     -webkit-text-decoration-skip: objects;
   }
   a:active,

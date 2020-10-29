@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { config } from 'react-awesome-styled-grid'
-import siteConfig from '../../../data/siteConfig'
+import workExperience from '../../../data/workExperience'
+import { Link } from 'gatsby'
 
 const Timeline = ({ className }) => (
   <div className={className}>
     <h1>Experience</h1>
-    {siteConfig.jobs && siteConfig.jobs.map(job => (
+    {workExperience.jobs && workExperience.jobs.map(job => (
       <article 
         key={job.begin.month + job.begin.year} 
         className='timeline__item animate-on-scroll'
@@ -23,10 +24,16 @@ const Timeline = ({ className }) => (
                 : `${job.occupation}`} 
               <br />
               <small className='timeline__card-title--small'>
-                ({job.duration || 'present'})
+                {job.duration || ''}
               </small>
+              <small className='timeline__card-title--small'>
+                <Link to={job.website}>{job.website}</Link>
+              </small>
+              
             </h2>
-            <p>{job.description}</p>
+            <p>{job.description && job.description.map((line,i) => (
+              <p>{line}</p>
+            ))}</p>
           </div>
         </div>
       </article>
